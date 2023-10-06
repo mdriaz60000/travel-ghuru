@@ -5,8 +5,9 @@ import Home from './../Page/Home/Home';
 const Root = () => {
     return (
         <div>
-            <Home></Home>
+          
            <Outlet></Outlet> 
+           <Home></Home>
         </div>
     );
 };

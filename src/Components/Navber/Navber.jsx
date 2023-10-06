@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo   from '../../assets/logo.png'
 
 const Navber = () => {
@@ -13,13 +14,13 @@ const Navber = () => {
           <ul className="menu menu-horizontal px-1 gap-20 text-white">
             <li><a>news</a></li>
             <li><a>Item 3</a></li>
-            <li><a>blog</a></li>
+            <li><Link> blog</Link></li>
             <li><a>contact 3</a></li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
-        </div>
+       
+          <Link to= '/login'> <button className=' btn'> Login</button></Link>
+       
       </div>
     );
 };
