@@ -7,8 +7,9 @@ import {
 import "./index.css";
 import Root from './Root/Root';
 import Login from "./Page/Login/Login";
-import Blog from "./Page/Blog/Blog";
+
 import Register from './Page/Register/Register';
+import Room from './Page/Room/Room';
 
 
 const router = createBrowserRouter([
@@ -21,8 +22,9 @@ const router = createBrowserRouter([
         element:<Login></Login>,
       },
       {
-        path: '/blog',
-        element:<Blog></Blog>,
+        path: '/room',
+        element:<Room></Room>,
+        loader:()=>fetch('hotel.json')
       },
       {
         path: '/register',

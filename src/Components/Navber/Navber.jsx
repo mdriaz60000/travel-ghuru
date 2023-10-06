@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo   from '../../assets/logo.png'
 
 const Navber = () => {
@@ -11,10 +11,17 @@ const Navber = () => {
           <input type="search" name="" id="" />
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-20 text-white">
+          <ul className="menu menu-horizontal px-1 gap-20 text-red-600">
             <li><a>news</a></li>
             <li><a>Item 3</a></li>
-            <li><Link> blog</Link></li>
+            <NavLink
+  to="/room"
+  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  }
+>
+  Room
+</NavLink>
             <li><a>contact 3</a></li>
           </ul>
         </div>

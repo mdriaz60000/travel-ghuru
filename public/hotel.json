@@ -5,7 +5,7 @@
       "details": "Spacious room with a city view",
       "rating": 4.5,
       "price": 250.00,
-      "image": "https://example.com/images/luxury_suite.jpg"
+      "image": "https://i.ibb.co/Nnm7d2Z/111.jpg"
     },
     {
       "title": "Standard Room",
@@ -13,7 +13,7 @@
       "details": "Cozy room for two guests",
       "rating": 3.8,
       "price": 120.00,
-      "image": "https://example.com/images/standard_room.jpg"
+      "image": "https://i.ibb.co/Nnm7d2Z/111.jpg"
     },
     {
       "title": "Family Suite",
@@ -21,7 +21,7 @@
       "details": "Perfect for families with a living area",
       "rating": 4.2,
       "price": 350.00,
-      "image": "https://example.com/images/family_suite.jpg"
+      "image": "https://i.ibb.co/Nnm7d2Z/111.jpg"
     }
   ]
   
