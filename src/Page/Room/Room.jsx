@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import HotelRoom from "../HotelRoom/HotelRoom";
 import Maps from "../../Components/Maps/Maps";
 
+
 const Room = () => {
   const hotelRooms = useLoaderData();
   console.log(hotelRooms);

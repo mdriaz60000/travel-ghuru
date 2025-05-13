@@ -11,6 +11,7 @@ import Login from "./Page/Login/Login";
 import Register from './Page/Register/Register';
 import Room from './Page/Room/Room';
 import Home from './Page/Home/Home';
+import Booking from './Components/Booking/Booking';
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element:<Register></Register>,
+      },
+      {
+        path: '/booking',
+        element:<Booking></Booking>,
       },
     ]
   },

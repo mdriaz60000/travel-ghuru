@@ -13,37 +13,31 @@ const Login = () => {
 
     return (
      
-      <div>
-        <Navber></Navber>
-        <div className=' mx-80 '>
-      <h1 className="text-5xl font-bold">Login now!</h1>
-   <form onSubmit={handleLogin} className=" outline p-6 ">
+      <div className=" bg-white">
+        <Navber className='text-black'></Navber>
+        <div className=' mx-80  outline mt-12 '>
+      <h1 className="text-3xl  font-medium px-6 pt-4">Login </h1>
+   <form onSubmit={handleLogin} className="  p-6 ">
            <div className="form-control">
-             <label className="label">
-               <span className="label-text">Email</span>
-             </label>
-             <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+             
+             <input type="email" name="email" placeholder="email" className=" input border-b-[4px] border-red-700" required />
            </div>
+           <br />
            <div className="form-control">
-             <label className="label">
-               <span className="label-text">Password</span>
-             </label>
              <input type="password" name="password" placeholder="password" className="input input-bordered" required />
              <label className="label">
-               <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+               <a href="#" className="  label-text-alt link link-hover">Forgot password?</a>
              </label>
            </div>
            <div className="form-control mt-6">
              <button className="btn btn-primary">Login</button>
            </div>
-           <p>don,t have account?<Link className=' text-red-600' to='/register'> pleace Register</Link></p>
-         </form>
-         <div className=' flex'>
-         <p > <hr className=' bg-red-300 py-2' /></p>
-         <p>or</p>
-         <p><hr className=' bg-red-300 py-2' /></p>
-         </div>
-         <div className=' p-10 space-y-3'>
+           <p className=" text-center mt-3">don,t have account?<Link className=' text-red-600' to='/register'> pleace Register</Link></p>
+         </form>  
+           </div>
+
+  
+         <div className=' mt-5  w-1/4 mx-auto space-y-3'>
          <button className="btn btn-outline w-full rounded-3xl ">
     <FaFacebook></FaFacebook>
     Continue with Facebook
@@ -54,7 +48,6 @@ const Login = () => {
    </button>
          </div>
    
-           </div>
    
       </div>
     );

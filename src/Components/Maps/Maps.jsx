@@ -10,7 +10,7 @@ const Maps = () => {
           lat: 21.4285,
           lng: 91.9702
         },
-        zoom: 11
+        zoom: 14
       };
     return (
          // Important! Always set the container height explicitly
