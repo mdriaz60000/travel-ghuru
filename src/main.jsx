@@ -13,6 +13,8 @@ import Room from './Page/Room/Room';
 import Home from './Page/Home/Home';
 import Booking from './Components/Booking/Booking';
 import ContactPage from "./Page/Contact/Contact";
+import Blog from "./Page/Blog/Blog";
+import AuthProvider from "./Provider/AuthProvider";
 
 
 const router = createBrowserRouter([
@@ -45,12 +47,17 @@ const router = createBrowserRouter([
         path: '/contact',
         element:<ContactPage></ContactPage>,
       },
+      {
+        path: '/blog',
+        element:<Blog></Blog>,
+      },
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider><RouterProvider router={router} /></AuthProvider>
+    
   </React.StrictMode>
 );

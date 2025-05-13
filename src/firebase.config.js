@@ -5,14 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBqUc2AhAcfpPAlxaqNzrHf4rwd82gb_sU",
-  authDomain: "travel-ghuru.firebaseapp.com",
-  projectId: "travel-ghuru",
-  storageBucket: "travel-ghuru.appspot.com",
-  messagingSenderId: "1044152241355",
-  appId: "1:1044152241355:web:977a3dc688b31de0eb5f4e"
+  apiKey: "AIzaSyBWhVlTzZb9kEldhwtzDo8p_3MrC6f0saY",
+  authDomain: "new-travel-ghuru.firebaseapp.com",
+  projectId: "new-travel-ghuru",
+  storageBucket: "new-travel-ghuru.firebasestorage.app",
+  messagingSenderId: "865153349218",
+  appId: "1:865153349218:web:8f20095bbc9e945d59c33b"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
+export default app

@@ -1,8 +1,27 @@
 import { Link } from "react-router-dom";
-import { FaFacebook, FaGoogle, FaEnvelope, FaLock } from "react-icons/fa";
+import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Login = () => {
+
+const {logIn, googlelogIn} = useContext(AuthContext)
+
+ const handlegoogleLogin = () =>{
+    //signInUser user in firebase
+    googlelogIn()
+    .then((result) => {
+      console.log(result.user);
+      toast("googleLogin successful!");
+      
+    })
+    .catch((error) => {
+      console.error(error);
+      toast("error googlelogin!");
+    });
+ }
+
   const handleLogin = e => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -54,8 +73,21 @@ const Login = () => {
                                 Login
                             </button>
                         </div>
+                                       {/* Login Link */}
+                <div className="text-center">
+                    <p className="text-gray-600">
+                        Create an account?{' '}
+                        <Link 
+                            to='/register' 
+                            className="text-primary hover:text-primary-dark font-medium transition-colors"
+                        >
+                            Register
+                        </Link>
+                    </p>
+                </div>
                     </div>
                 </form>
+                
 
                 {/* Divider */}
                 <div className='flex items-center my-8'>
@@ -66,28 +98,18 @@ const Login = () => {
 
                 {/* Social Login Buttons */}
                 <div className='space-y-4 mb-8'>
+                                        <button onClick={handlegoogleLogin} className="flex items-center justify-center w-full py-3 px-4 border border-gray-300 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-all">
+                        <FaGoogle className="text-red-600 text-xl mr-3" />
+                        Continue with Google
+                    </button>
                     <button className="flex items-center justify-center w-full py-3 px-4 border border-gray-300 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-all">
                         <FaFacebook className="text-blue-600 text-xl mr-3" />
                         Continue with Facebook
                     </button>
-                    <button className="flex items-center justify-center w-full py-3 px-4 border border-gray-300 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-all">
-                        <FaGoogle className="text-red-600 text-xl mr-3" />
-                        Continue with Google
-                    </button>
+
                 </div>
 
-                {/* Login Link */}
-                <div className="text-center">
-                    <p className="text-gray-600">
-                        Already have an account?{' '}
-                        <Link 
-                            to='/login' 
-                            className="text-primary hover:text-primary-dark font-medium transition-colors"
-                        >
-                            Sign in
-                        </Link>
-                    </p>
-                </div>
+ 
             </div>
         </div>
   );

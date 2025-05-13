@@ -27,10 +27,10 @@ const Navbar = ({className}) => {
                 {/* Navigation Links */}
                 <div className="flex items-center gap-4 md:gap-6 text-sm md:text-base">
                     <Link 
-                        to="/news" 
+                        to="/" 
                         className="text-white hover:text-warning transition-colors font-medium"
                     >
-                        News
+                        Home
                     </Link>
                     <Link 
                         to="/destination" 
