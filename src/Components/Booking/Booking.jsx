@@ -1,4 +1,4 @@
-import Navbar from "../Navber/Navber";
+
 import homebg from '../../assets/homebg.png';
 
 const Booking = () => {
@@ -14,9 +14,7 @@ const Booking = () => {
 
     return (
         <div style={divStyle}>
-            <div className="bg-black bg-opacity-60 absolute inset-0 z-0">
-              <Navbar />
-            </div>
+
             
             <div className="relative z-10 pt-16"> {/* Added padding-top to account for navbar */}
                 <section className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row gap-16 items-start py-12">

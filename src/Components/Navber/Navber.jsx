@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
-const Navbar = () => {
+const Navbar = ({className}) => {
     return (
-        <nav className=" backdrop-blur-sm py-4 px-6 lg:px-20 fixed w-full z-50">
+        <nav className={`${className} backdrop-blur-sm py-4 px-6 lg:px-20 fixed w-full z-50`} >
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
                 {/* Logo */}
                 <Link to="/" className="flex-shrink-0">
@@ -51,7 +52,7 @@ const Navbar = () => {
                     </Link>
                     <Link 
                         to="/login" 
-                        className="btn btn-warning btn-sm md:btn-md hover:bg-opacity-90 transition-all"
+                        className="btn btn-warning btn-sm  hover:bg-opacity-90 transition-all"
                     >
                         Login
                     </Link>
